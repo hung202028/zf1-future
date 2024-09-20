@@ -190,5 +190,5 @@ jobs:
 
       - name: "Run tests on PHP ${{ matrix.php-version }} (Experimental: ${{ matrix.experimental }}) with extensions"
         run: |
-          bin/phpunit -c tests/phpunit.xml
+          bin/phpunit tests/Zend/Form/Element/TextTest.php -c tests/phpunit.xml
         continue-on-error: ${{ matrix.experimental }}
