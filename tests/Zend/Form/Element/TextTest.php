@@ -105,8 +105,8 @@ class Zend_Form_Element_TextTest extends TestCase
     public function testIsValid()
     {
         $this->element->addValidator(new Zend_Validate_StringLength(['min' => 5, 'max' => 10]));
-        $this->assertEquals(false, 'abc');
-        $this->assertEquals(true, 'abcdef');
+        $this->assertEquals(false, $this->element->isValid('abc'));
+        $this->assertEquals(true,  $this->element->isValid('abcdef'));
     }
 
     /**
